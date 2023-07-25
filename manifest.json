@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Save Mark",
+  "version": "0.1",
+  "description": "Add a button to save Discord message links to local storage.",
+  "icons": {
+    "48": "icons/48.png",
+    "96": "icons/96.png"
+  },
+  "permissions": ["storage", "https://discord.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://discord.com/*"],
+      "js": ["content_script.js"]
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html"
+  }
+}
